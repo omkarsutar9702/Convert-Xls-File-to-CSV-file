@@ -1,10 +1,13 @@
+#%%
 # Import necessary modules
 from win32com import client
 import pandas as pd
-
+from sharepoint_utils import connect_to_sharepoint
+from sharepoint_utils import upload_dataframe_to_sharepoint
+#%%
 # Define the file path
-file_path = r"C:\Users\OFFSHORE262\Downloads\Invoice Status Report.xls"
-
+file_path = r"C:\Users\HP\somaiya.edu\PyDataNinja - Python\C) Production\XLS to XLSX\Invoice Status Report.xls"
+#%%
 # Function to read Excel file and convert to DataFrame
 def read_excel_to_df(file_path):
     # Open Microsoft Excel
@@ -13,7 +16,7 @@ def read_excel_to_df(file_path):
         # Read Excel File
         workbook = excel.Workbooks.Open(file_path)
         # Select the first worksheet
-        worksheet = workbook.Worksheets[1]  # Use 1-based indexing for Worksheets
+        worksheet = workbook.Worksheets[0]  # Use 1-based indexing for Worksheets
         # Get the range of used cells in the worksheet
         used_range = worksheet.UsedRange
         # Extract the values from the used range
@@ -29,6 +32,10 @@ def read_excel_to_df(file_path):
         # Quit the Excel application
         excel.Quit()
     return df
-
+#%%
 # Call the function and get the DataFrame
 df = read_excel_to_df(file_path)
+
+# %%
+df
+# %%
