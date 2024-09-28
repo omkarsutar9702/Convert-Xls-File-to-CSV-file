@@ -39,7 +39,7 @@ def read_excel_to_df(file_path):
 # Call the function and get the DataFrame
 df = read_excel_to_df(file_path)
 # %%
-ctx = connect_to_sharepoint('omkar.sutar@somaiya.edu' , 'Sunfl0wer@1234' , 'https://somaiya0.sharepoint.com/sites/PyDataNinja')
+ctx = connect_to_sharepoint('user id' , 'passwrod' , 'site url')
 # %%
 File_URL = '/sites/PyDataNinja/Python/C) Production/XLS to XLSX/ouput csv file'
 # %%
