@@ -9,7 +9,7 @@ from sharepoint_utils import get_file_path
 from sharepoint_utils import read_file_from_different_library
 #%%
 # Define the file path
-file_path = r"C:\Users\HP\somaiya.edu\PyDataNinja - Python\C) Production\XLS to XLSX\Input xls file\Invoice Status Report.xls"
+file_path = r"filte path"
 #%%
 # Function to read Excel file and convert to DataFrame
 def read_excel_to_df(file_path):
